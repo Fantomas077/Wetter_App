@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Yd0pPS3b3vdUQH3U2wzXORwGk2cM3KpbWEB2dw9sIu3RoIIkkhalUBSXOY6S+qwe2S9eLAA7ukJmYjSITTV2qw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Athlon\\Documents\\C# revisions\\Meteo\\App_Meteo\\App_Meteo\\App_Meteo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Athlon\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

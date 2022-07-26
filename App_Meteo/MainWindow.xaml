@@ -1,0 +1,108 @@
+﻿<Window x:Class="App_Meteo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App_Meteo"
+        mc:Ignorable="d"
+        Title="Wetter" Height="450" Width="800" WindowStyle="ToolWindow" Icon="/669958_weather_cloud_forecast_sun_icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+
+    <DockPanel LastChildFill="False" >
+
+        <StackPanel DockPanel.Dock="Left" Width="180">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5B7272"/>
+                    <GradientStop Color="#FF554A4A" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Image Source="/669958_weather_cloud_forecast_sun_icon.png" Width="45" Margin="5,0,0,0" />
+                <Label Content="Wetter" Foreground="#FFF4EC68" FontSize="25" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold"/>
+
+
+            </StackPanel>
+
+            <Label Content="Stadt eingeben" Margin="0,5,0,5" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <Label.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF3F3F7B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Foreground>
+            </Label>
+            <TextBox Margin="5,5,5,5"  Height="25" x:Name="StadtTxt"/>
+            <Button Margin="5,5,5,5" Height="25" Background="#FF686868" x:Name="btnSuchen" Click="btnSuchen_Click">SUCHEN</Button>
+            <Separator Height="20"/>
+            <Button Margin="5,10,5,8" Height="25" Background="#FF686868" x:Name="btnInfos" Click="btnInfos_Click" >INFOS</Button>
+
+            <Label Content="Software Version 2.1.0" Margin="0,5,0,5" Name="LblInfos" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#FF0012FF" Visibility="Hidden" />
+
+
+        </StackPanel>
+        <Canvas>
+
+            <Image x:Name="Headerimage" Height="250" Width="620" Source="/123Z_2101.w020.n001.949B.p15.949.jpg" Stretch="UniformToFill"/>
+
+            <!---Name der Stadt-->
+            <Label Content="Berlin" x:Name="Stadt" Foreground="White" FontSize="40" FontWeight="Bold" Canvas.Left="231" Canvas.Top="14" HorizontalContentAlignment="Right" Width="356" RenderTransformOrigin="0.35,0.776">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+            <!---Temperatur-->
+            <Label Name="temperatur" Content="+15°C " Foreground="White" FontSize="60" FontWeight="Bold" Canvas.Left="28" Canvas.Top="44" HorizontalContentAlignment="Left" Width="257" RenderTransformOrigin="0.35,0.776">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+
+            <!---Datum-->
+            <Label Content="Montag, 31.05.2022" x:Name="Datum" Foreground="White" FontSize="30" FontWeight="Bold" Canvas.Left="171" Canvas.Top="179" HorizontalContentAlignment="Right" Width="416" RenderTransformOrigin="0.35,0.776">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+
+
+            <!--Description-->
+            <Label Name="Description"  Content="Sonnig" Foreground="White" FontSize="20" FontWeight="Bold" Canvas.Left="231" Canvas.Top="77" HorizontalContentAlignment="Right" Width="356" RenderTransformOrigin="0.35,0.776">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+
+            <!--Wind-->
+            <Label Name="wind" Content="25Km/h" Foreground="White" FontSize="20" FontWeight="Bold" Canvas.Top="139" HorizontalContentAlignment="Right" Width="190" RenderTransformOrigin="0.35,0.776" Canvas.Left="28">
+                <Label.Effect>
+                    <DropShadowEffect/>
+                </Label.Effect>
+            </Label>
+
+        </Canvas>
+
+        <DockPanel DockPanel.Dock="Bottom" Height="165">
+            <StackPanel Width="239">
+                <Label  Name="forecast1" Content=" Mon" HorizontalContentAlignment="Center" FontWeight="Black" FontSize="20"/>
+                <Image Source="/sun.png" Width="70" Height="70" RenderTransformOrigin="-0.043,0.363"/>
+                <Label  Name="temp1"  Content=" +12°C" HorizontalContentAlignment="Center" FontWeight="Black" FontSize="20"/>
+            </StackPanel>
+            <StackPanel Width="200">
+                <Label Name="forecast2" Content=" Dien" HorizontalContentAlignment="Center" FontWeight="Black" FontSize="20"/>
+                <Image Source="/icons8-rain-48.png" Width="70" Height="70" RenderTransformOrigin="-0.043,0.363"/>
+                <Label  Name="temp2" Content=" 6°C" HorizontalContentAlignment="Center" FontWeight="Black" FontSize="20"/>
+            </StackPanel>
+            <StackPanel Width="133" HorizontalAlignment="Center">
+                <Label Name="forecast3" Content=" Mitt" HorizontalContentAlignment="Center" FontWeight="Black" FontSize="20"/>
+                <Image Source="/sun.png" Width="70" Height="70" RenderTransformOrigin="-0.043,0.363"/>
+                <Label Name="temp3" Content=" +10°C" HorizontalContentAlignment="Center" FontWeight="Black" FontSize="20"/>
+            </StackPanel>
+
+
+        </DockPanel>
+
+    </DockPanel>
+
+</Window>
